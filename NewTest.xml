@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="1">
+
+	<test name="order_client_test">
+		<classes>
+			<class name="cases.Test_Client">
+				<!-- 测试用例将使用到的properties文件名 -->
+				<parameter name="fileName" value="demo1" />
+				<methods>
+					<include name="test_login"></include>
+					<include name="test_add_order"></include>
+					<include name="test_count_check"></include>
+					<include name="test_price_check"></include>
+					<include name="test_order_detail"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="order_admin_test">
+		<classes>
+			<class name="cases.Test_Admin">
+				<!-- 测试用例将使用到的properties文件名 -->
+				<parameter name="fileName" value="demo2" />
+				<methods>
+					<include name="test_admin_login"></include>
+					<include name="test_confirm_passed"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<!-- <test name="test2"> -->
+	<!-- <classes> -->
+	<!-- <class name="im.order.cases.NewTest"> -->
+	<!-- 测试用例将使用到的properties文件名 -->
+	<!-- <parameter name="fileName" value="demo2" /> -->
+	<!-- <methods> -->
+	<!-- <include name="test_login" /> -->
+	<!-- </methods> -->
+	<!-- </class> -->
+	<!-- </classes> -->
+	<!-- </test> -->
+
+	<listeners>
+		<!-- <listener class-name="org.uncommons.reportng.HTMLReporter" /> -->
+		<!-- <listener class-name="org.uncommons.reportng.JUnitXMLReporter" /> -->
+		<!-- <listener class-name="com.vimalselvam.testng.listener.ExtentTestNgFormatter" 
+			/> -->
+		<listener class-name="test.ExtentTestNGIReporterListener" />
+	</listeners>
+</suite> <!-- Suite -->
+
