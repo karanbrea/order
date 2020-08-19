@@ -60,6 +60,13 @@
 			<artifactId>reportng</artifactId>
 			<version>1.8.8</version>
 		</dependency>
+		
+		<!-- 国货java工具类整合包 -->
+		<dependency>
+    			<groupId>cn.hutool</groupId>
+    			<artifactId>hutool-all</artifactId>
+    			<version>5.3.10</version>
+		</dependency>
 
 		<!-- 必须，不然报错 -->
 		<dependency>
